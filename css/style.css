@@ -1,0 +1,182 @@
+/* reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* estilo tipografia */
+
+main p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+/* estilos header */
+
+header{
+    display: flex;
+    background-color: rgb(240, 240, 115);
+    align-items: center;
+    justify-content: space-between;
+    padding-inline-start: 15px;
+}
+
+.nav-color{
+    background-color: rgb(240, 240, 115);
+}
+/* estilo home */
+
+.home {
+    height: 70vh;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 45% 55%;
+    row-gap: 2rem;
+}
+
+.home div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* estilo biografia */
+
+.biografia {
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+/* estilo contacto */
+
+.contacto {
+    display: flex
+}
+
+/* estilo galeria */
+
+main .galeria {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+main .galeria {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);  
+    grid-template-rows: repeat(2, 50%);  
+}
+
+/* estilos Clases */
+
+.clases {
+    height: 500px;
+    display: grid;
+    grid-template-rows: 10% 20% 70% ;
+    margin-bottom: 100px;
+}
+
+
+main .grilla-horarios {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    gap: 10px;
+    width: 100%;
+}
+
+main .dias {
+    padding: 10px;
+    background-color:  #dddddd;
+}
+
+main .celda{
+    padding: 10px;
+    background-color:  #dddddd;
+}
+
+main .dias-lunes, .dias-domingo{
+     display: none;
+}
+
+/* estilos footer */
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(240, 240, 115);
+    padding-inline-end: 50px;
+    padding-inline-start: 50px; 
+    padding: 20px;   
+}
+
+footer div ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.derechos{
+    display: none;
+}
+
+/* estilo para desktop */
+
+/* mq de desktop */
+
+@media screen and (min-width:1024px){
+    .derechos{
+      display: block;  
+    }
+    .biografia{
+        display: flex;
+        align-items: center;
+    }
+    main .grilla-horarios {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 10px;
+    }
+    main .dias {
+        display: flex;
+        justify-content: center; /* Centra el contenido horizontalmente */
+        align-items: center; /* Centra el contenido verticalmente */
+        background-color: #dddddd;
+        padding: 20px;
+    }
+    
+    .celda {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #dddddd;
+        padding: 20px;
+    }
+    main .dias-lunes, .dias-domingo{
+        display: block;
+        display: flex;
+        justify-content: center; /* Centra el contenido horizontalmente */
+        align-items: center; /* Centra el contenido verticalmente */
+        background-color: #dddddd;
+        padding: 20px
+   }
+
+}
+
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+.wrapper{
+    flex: 1;
+  }
+  
+ 
