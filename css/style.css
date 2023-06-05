@@ -17,14 +17,14 @@ main p {
 
 header{
     display: flex;
-    background-color: rgb(240, 240, 115);
+    background-color: rgb(204, 35, 5);
     align-items: center;
     justify-content: space-between;
     padding-inline-start: 15px;
 }
 
 .nav-color{
-    background-color: rgb(240, 240, 115);
+    background-color: rgb(204, 35, 5);
 }
 /* estilo home */
 
@@ -107,17 +107,6 @@ main .dias-lunes, .dias-domingo{
 
 footer {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: rgb(240, 240, 115);
-    padding-inline-end: 50px;
-    padding-inline-start: 50px; 
-    padding: 20px;   
-}
-
-footer div ul li a{
-    text-decoration: none;
-    color: black;
 }
 
 .derechos{
@@ -160,8 +149,8 @@ footer div ul li a{
     main .dias-lunes, .dias-domingo{
         display: block;
         display: flex;
-        justify-content: center; /* Centra el contenido horizontalmente */
-        align-items: center; /* Centra el contenido verticalmente */
+        justify-content: center; 
+        align-items: center; 
         background-color: #dddddd;
         padding: 20px
    }
