@@ -13,73 +13,182 @@ main p {
     font-weight: bold;
 }
 
+body{
+    background: linear-gradient(to bottom right, #ffbfbf, #a00000);
+}
 /* estilos header */
 
 header{
     display: flex;
-    background-color: rgb(204, 35, 5);
     align-items: center;
     justify-content: space-between;
     padding-inline-start: 15px;
+    padding: 20px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
 }
 
-.nav-color{
-    background-color: rgb(204, 35, 5);
+header nav ul li{
+    transition: 0.5s;
+    color: black;
 }
+
+header nav ul li:hover{
+    transform: scale(1.2);
+    text-shadow: 1px 1px 20px black;
+    transition: 0.5s;
+}
+
 /* estilo home */
 
-.home {
-    height: 70vh;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 45% 55%;
-    row-gap: 2rem;
-}
-
-.home div img{
+.escuela {
+    display: flex;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
 }
 
+.escuela img{
+    width: 40vw;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.escuela img:hover{
+    transform: scale(1.1);
+    
+}
+
+.escuela p{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.sol{
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+.sol img{
+    width: 40vw;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.sol img:hover{
+    transform: scale(1.1);
+}
+
+.sol p{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.difundiendo{
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+.difundiendo img{
+    margin: 10px;
+    width: 40vw;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.difundiendo img:hover{
+    transform: scale(1.1);
+}
+
+.difundiendo p{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-right: 10px;
+}
 
 /* estilo biografia */
 
 .biografia {
-    display: grid;
-    grid-template-columns: 100%;
+    width: 80vw;
+    max-width: 1000px;
+    min-width: 320px;
+    margin: auto;
+}
+
+.biografia img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 3px 5px rgba(15, 15, 15, 0.5);
+    margin-top: 30px;
+}
+
+.parrafobiografia {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 3px 5px rgba(15, 15, 15, 0.5);
+    margin-top: 30px;
 }
 
 /* estilo contacto */
 
-.contacto {
-    display: flex
+.contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 3px 5px rgba(15, 15, 15, 0.5);
+    margin: 10px;
+    border-radius: 15px;
 }
 
 /* estilo galeria */
 
-main .galeria {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+.imagenes img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 3px 5px rgba(15, 15, 15, 0.5);
+    margin-top: 30px;
 }
 
-main .galeria {
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 50%);  
-    grid-template-rows: repeat(2, 50%);  
+.imagenes {
+    width: 80vw;
+    max-width: 1000px;
+    min-width: 320px;
+    margin: auto ;
 }
 
 /* estilos Clases */
 
 .clases {
-    height: 500px;
-    display: grid;
-    grid-template-rows: 10% 20% 70% ;
-    margin-bottom: 100px;
+    display: flex;
 }
 
+.tango-uno, .tango-tecnica{
+    margin: 0 10px;
+    
+}
+
+.tango-uno span, .tango-tecnica span{
+    color: #a00000;
+
+}
 
 main .grilla-horarios {
     display: grid;
@@ -91,12 +200,12 @@ main .grilla-horarios {
 
 main .dias {
     padding: 10px;
-    background-color:  #dddddd;
+    background-color: #dddddd;
 }
 
 main .celda{
     padding: 10px;
-    background-color:  #dddddd;
+    background-color: #dddddd;
 }
 
 main .dias-lunes, .dias-domingo{
@@ -106,7 +215,6 @@ main .dias-lunes, .dias-domingo{
 /* estilos footer */
 
 footer {
-    background-color: rgb(204, 35, 5);
     min-height: 10vh;
     display: flex;
     justify-content: center;
@@ -137,7 +245,6 @@ footer ul {
     text-align: center;
     color: black;
     padding: 20px;
-    
 }
 
 .derechos{
@@ -149,23 +256,147 @@ footer ul {
 /* mq de desktop */
 
 @media screen and (min-width:1024px){
+    /* hover para el menu con transformaciones*/
+    header nav ul li{
+        transition: 0.5s;
+        color: black;
+    }
+
+    header nav ul li:hover{
+        transform: scale(1.1);
+        text-shadow: 1px 1px 20px black;
+        transition: 0.5s;
+    }
+
     .derechos{
       display: block;  
     }
-    .biografia{
+
+      /* Home */
+
+    .home {
         display: flex;
-        align-items: center;
+        text-align: center;
+        transition: 0.5s;
     }
+
+    .escuela {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .escuela img:hover{
+        transform: scale(1.1);
+        
+    }
+    
+    .escuela img{
+        width: 25vw;
+        margin: 20px;
+        border-radius: 20px;
+    }
+    
+    .escuela p{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        padding-right: 50px;
+        padding-left: 50px;
+        margin-top: 15px;
+    }
+    
+    .sol{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .sol img:hover{
+        transform: scale(1.1);
+    }
+    
+    .sol img{
+        width: 25vw;
+        margin: 20px;
+        border-radius: 20px;
+    }
+    
+    .sol p{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        padding-right: 50px;
+        padding-left: 50px;
+        margin-top: 15px;
+    }
+    
+    .difundiendo{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .difundiendo img:hover{
+        transform: scale(1.1);
+    }
+    
+    .difundiendo img{
+        width: 25vw;
+        margin: 20px;
+        border-radius: 20px;
+    }
+    
+    .difundiendo p{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        padding-right: 50px;
+        padding-left: 50px;
+        margin-top: 15px;
+    }
+    
+    /* Biografia */
+
+    .biografia {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%; 
+        column-gap: 2rem;
+        margin-bottom: 40px;
+    }
+    .biografia img{
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+        box-shadow: 0px 3px 5px rgba(15, 15, 15, 0.5);
+    }
+    .parrafobiografia {
+        text-align: center;
+        font-size: 0.9rem;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px;
+        box-shadow: 0px 3px 5px rgba(15, 15, 15, 0.5);   
+    }
+
+    /*Clases*/
+    
     main .grilla-horarios {
         display: grid;
         grid-template-columns: repeat(7, 1fr);
         grid-template-rows: repeat(5, 1fr);
         gap: 10px;
     }
+
     main .dias {
         display: flex;
-        justify-content: center; /* Centra el contenido horizontalmente */
-        align-items: center; /* Centra el contenido verticalmente */
+        justify-content: center; 
+        align-items: center; 
         background-color: #dddddd;
         padding: 20px;
     }
@@ -177,15 +408,51 @@ footer ul {
         background-color: #dddddd;
         padding: 20px;
     }
+
     main .dias-lunes, .dias-domingo{
         display: block;
         display: flex;
         justify-content: center; 
         align-items: center; 
         background-color: #dddddd;
-        padding: 20px
-   }
+        padding: 20px;
+    }
 
+   /* Galeria */
+
+   .imagenes img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0px 3px 5px rgba(15, 15, 15, 0.5);
+        margin-top: 10px;
+    }
+
+    .imagenes {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+        width: 80vw;
+        height: 90vh;
+        max-width: 1000px;
+        min-width: 320px; 
+        margin-bottom: 35px;
+        row-gap: 2rem;
+        column-gap: 2rem;
+    }
+
+    /* Contacto */
+
+    .contacto{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        box-shadow: 0px 3px 5px rgba(15, 15, 15, 0.5);
+        margin: 10px;
+        border-radius: 15px;
+    }
 }
 
 body{
