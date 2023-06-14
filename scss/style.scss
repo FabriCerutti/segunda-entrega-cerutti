@@ -1,0 +1,421 @@
+/* reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* estilo tipografia */
+
+main p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+body{
+    background: linear-gradient(to bottom right, #ffbfbf, #a00000);
+}
+
+// import
+
+@import "utilidades/vars";
+@import "utilidades/mixin";
+@import "utilidades/extend";
+
+// nesting
+
+/* estilos header */
+
+header{
+    @include flex;
+    justify-content: space-between;
+    padding-inline-start: 15px;
+    padding: 20px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    nav ul li{
+        transition: 0.5s;
+        color: $color-secundario;
+        :hover{
+            transform: scale(1.2);
+            text-shadow: 1px 1px 20px black;
+            transition: 0.5s;
+        }
+    }
+}
+
+/* estilos home */
+
+.escuela{
+    display: flex;
+    @include productos (100%, auto);
+    img{
+        width: $medida-ancho;
+        margin: $medida-margin;
+        border-radius: $medida-borde;
+        transition: 0.5s;
+        :hover{
+            transform: scale(1.1);
+        } 
+    } 
+    p{
+        @include flex;
+        text-align: center;
+        margin-right: $medida-margin;
+    }
+}
+
+.sol{
+    display: flex;
+    @include productos (100%, auto);
+    img{
+        width: $medida-ancho;
+        margin: $medida-margin;
+        border-radius: $medida-borde;
+        transition: 0.5s;
+        :hover{
+            transform: scale(1.1);
+        } 
+    } 
+    p{
+        @include flex;
+        text-align: center;
+        margin-right: $medida-margin;
+    }
+}
+
+.difundiendo{
+    display: flex;
+    @include productos (100%, auto);
+    img{
+        width: $medida-ancho;
+        margin: $medida-margin;
+        border-radius: $medida-borde;
+        transition: 0.5s;
+        :hover{
+            transform: scale(1.1);
+        } 
+    } 
+    p{
+        @include flex;
+        text-align: center;
+        margin-right: $medida-margin;
+    }
+}
+
+/* estilo biografia */
+
+.biografia{
+    width: $medida-ancho * 2;
+    max-width: 1000px;
+    max-width: 320px;
+    margin: auto;
+    img{
+        width: $medida-alto;
+        height: $medida-alto;
+        object-fit: cover;
+        padding: $medida-margin * 2;
+        border-radius: $medida-borde - 5px;
+        box-shadow: 0px 3px 5px rgba(15, 15, 15, 0.5);
+        margin-top: $medida-margin * 3;
+    }
+}
+.parrafobiografia{
+    @include productos (100%, 100%);
+    object-fit: cover;
+    padding: $medida-margin * 2;
+    border-radius: $medida-borde - 5px;
+    box-shadow: 0px 3px 5px rgba(15, 15, 15, 0.5);
+    margin-top: $medida-margin * 3;
+}
+
+/* estilos clases */
+
+.clases{
+    display: flex;
+}
+.tango-uno, .tango-tecnica{
+    margin: 0 10px;
+}
+.tango-uno span, .tango-tecnica span{
+    color:$color-letra
+}
+main .grilla-horarios{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    gap: 10px;
+    width: 100%;
+}
+main .dias{
+    @extend %fondo;
+}
+main .celda{
+    @extend %fondo;
+}
+main .dias-lunes, .dias-domingo{
+    display: none;
+}
+
+/* estilos galeria */
+
+.imagenes{
+    width: $medida-ancho * 2;
+    max-width: 1000px;
+    min-width: 320px;
+    margin: auto;
+    img{
+        @include productos (100%, 100%);
+        object-fit: cover;
+        padding: $medida-padding * 2;
+        border-radius: $medida-borde - 5px;
+        box-shadow: 0px 3px 5px rgba(15, 15, 15, 0.5);
+        margin-top: $medida-padding * 3;
+    }
+}
+
+/* estilos contacto */
+
+.contacto{
+    @include flex;
+    flex-direction: column;
+    box-shadow: 0px 3px 5px rgba(15, 15, 15, 0.5);
+    margin: $medida-padding;
+    border-radius: $medida-borde - 5px;
+}
+
+/* estilos footer */
+
+footer{
+    min-height: 10vh;
+    @include flex;
+    justify-content: center;
+    justify-content: space-between;
+    padding: $medida-margin * 2;
+    ul{
+        list-style-type: none;
+        display: flex;
+        margin: $medida-margin * 2;
+        padding: $medida-margin * 2;
+    }
+}
+
+.redes{
+    min-width: 300px;
+    display: flex;
+    justify-content: space-between;
+    a{
+        text-decoration: none;
+        font-size: 25px;
+        @include productos (80px, 90px);
+        line-height: 40px;
+        text-align: center;
+        color: $color-secundario;
+        padding: $medida-margin * 2;
+    }
+}
+
+.derechos{
+    display: none;
+}
+
+/* estilos para desktop */
+
+/* mq de desktop */
+
+@media screen and (min-width:1024px){
+    
+    /* estilo header*/
+
+    header nav ul li{
+        transition: 0.5s;
+        color: $color-secundario;
+        :hover{
+            transform: scale(1.1);
+            text-shadow: 1px 1px 20px black;
+            transition: 0.5s;
+        }
+    }
+
+    .derechos{
+        display: block;
+    }
+
+    /* Home */
+
+    .home{
+        display: flex;
+        text-align: center;
+        transition: 0.5s;
+    }
+
+    .escuela{
+        display: flex;
+        flex-direction: column;
+        @include productos (100%, auto);
+        img{
+            width: $medida-ancho - 15vw;
+            margin: $medida-margin * 2;
+            border-radius: $medida-borde;
+            :hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+    .escuela p{
+        @include flex;
+        text-align: center;
+        padding-right: $medida-padding * 5;
+        padding-left: $medida-padding * 5;
+        margin-top: $medida-margin + 5px;
+
+    }
+
+    .sol{
+        display: flex;
+        flex-direction: column;
+        @include productos (100%, auto);
+        img{
+            width: $medida-ancho - 15vw;
+            margin: $medida-margin * 2;
+            border-radius: $medida-borde;
+            :hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+    .sol p{
+        @include flex;
+        text-align: center;
+        padding-right: $medida-padding * 5;
+        padding-left: $medida-padding * 5;
+        margin-top: $medida-margin + 5px;
+
+    }
+    
+    .difundiendo{
+        display: flex;
+        flex-direction: column;
+        @include productos (100%, auto);
+        img{
+            width: $medida-ancho - 15vw;
+            margin: $medida-margin * 2;
+            border-radius: $medida-borde;
+            :hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+    .difundiendo p{
+        @include flex;
+        text-align: center;
+        padding-right: $medida-padding * 5;
+        padding-left: $medida-padding * 5;
+        margin-top: $medida-margin + 5px;
+
+    }
+
+    /* biografia */
+
+    .biografia{
+        width: $medida-ancho * 2;
+        max-width: 1000px;
+        max-width: 320px;
+        margin: auto;
+        img{
+            width: $medida-alto;
+            height: $medida-alto;
+            object-fit: cover;
+            padding: $medida-margin * 2;
+            border-radius: $medida-borde - 5px;
+            box-shadow: 0px 3px 5px rgba(15, 15, 15, 0.5);
+            margin-top: $medida-margin * 3;
+        }
+    }
+    .parrafobiografia{
+        @include productos (100%, 100%);
+        object-fit: cover;
+        padding: $medida-margin * 2;
+        border-radius: $medida-borde - 5px;
+        box-shadow: 0px 3px 5px rgba(15, 15, 15, 0.5);
+        margin-top: $medida-margin * 3;
+    }
+
+    /* Clases */
+
+    main .grilla-horarios{
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 10px;
+    }
+
+    main .dias{
+        @include flex;
+        justify-content: center;
+        background-color: $color-celda;
+    }
+
+    .celda{
+        @include flex;
+        justify-content: center;
+        background-color: $color-celda;
+        padding: $medida-padding * 2;
+    }
+
+    main .dias-lunes, .dias-domingo{
+        @include flex;
+        display: block;
+        justify-content: center;
+        background-color: $color-celda;
+        padding: $medida-padding * 2;
+
+    }
+
+    /* Galeria */
+
+    .imagenes{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+        @include productos (80vw, 90vh);
+        max-width: 1000px;
+        min-width: 320px;
+        margin-bottom: $medida-margin * 3 + 5px;
+        row-gap: 2rem;
+        column-gap: 2rem;
+        img{
+            @include productos (100%, 100%);
+            object-fit: cover;
+            padding: $medida-padding * 2;
+            border-radius: $medida-borde - 5px;
+            box-shadow: 0px 3px 5px rgba(15, 15, 15, 0.5);
+            margin-top: $medida-margin;
+        }
+    }
+
+    /* Contacto */
+
+    .contacto{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        box-shadow: 0px 3px 5px rgba(15, 15, 15, 0.5);
+        margin: $medida-margin;
+        border-radius: $medida-borde - 5px;
+    }
+
+
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.wrapper{
+    flex: 1;
+}
